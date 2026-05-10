@@ -2,5 +2,4 @@ server:
   port: 8787
 
 test:
-  username: phuongpx
-  password: 123456
+  username: mai trang 
