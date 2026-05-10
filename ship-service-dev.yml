@@ -1,17 +1,6 @@
-eureka:
-    client:
-        fetch-registry: true
-        register-with-eureka: true
-        service-url:
-            defaultZone: http://localhost:8686/eureka/
 server:
-    port: 8787
-spring:
-    application:
-        name: ship-service
-    cloud:
-      config:
-        uri: http://localhost:8888
+  port: 8787
+
 test:
-     username: phuongpx
-     password: 123456
+  username: phuongpx
+  password: 123456
