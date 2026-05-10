@@ -1,18 +1,21 @@
 eureka:
-    client:
-        fetch-registry: true
-        register-with-eureka: true
-        service-url:
-            defaultZone: http://localhost:8686/eureka/
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8686/eureka/
+
 server:
-    port: 8787
+  port: 8787
+
 spring:
-    application:
-        name: ship-service
-    cloud:
-      config:
-        uri: http://localhost:8888
-    test:
-         uri: http://localhost:8787/actuator/health
-         username: phuongpx
-         password: 123456
+  application:
+    name: ship-service
+
+  config:
+    import: optional:configserver:http://localhost:8888
+
+test:
+  uri: http://localhost:8787/actuator/health
+  username: phuongpx221
+  password: 123456
