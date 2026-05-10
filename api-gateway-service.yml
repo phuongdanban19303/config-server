@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: api-gateway
+#  cloud:
+#    gateway:
+#      server:
+#        webmvc:
+#          routes:
+#            - id : order-service
+#              uri : lb://ordermanagement
+#              predicates:
+#              - Path=/orders/**,/xyz/api/v1/orders/**
+#              filters:
+#                - AddRequestHeader=token, abcxzy
+#                - AddRequestHeader=authen, true
+#                - StripPrefix=1
+#            - id: ship-service
+#              uri: lb://ship-service
+#              predicates:
+#               - Path=/api/v1/ships/**
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8686/eureka/
+
+server:
+  port: 9898
+
+
+

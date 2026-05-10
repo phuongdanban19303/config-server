@@ -1,0 +1,36 @@
+eureka:
+    client:
+        fetch-registry: true
+        healthcheck:
+            enabled: true
+        register-with-eureka: true
+        service-url:
+            defaultZone: http://localhost:8686/eureka/
+server:
+    port: 8080
+spring:
+    application:
+        name: ordermanagement
+    datasource:
+        driver-class-name: org.postgresql.Driver
+        password: root
+        url: jdbc:postgresql://localhost:5432/order_service
+        username: postgres
+    jpa:
+        database-platform: org.hibernate.dialect.PostgreSQLDialect
+        hibernate:
+            ddl-auto: update
+            naming:
+                implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl
+                physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+        properties:
+            hibernate:
+                format_sql: true
+        show-sql: true
+springdoc:
+    api-docs:
+        path: /v1/api-docs
+    swagger-ui:
+        operationsSorter: method
+        path: /swagger-ui.html
+        tagsSorter: alpha
