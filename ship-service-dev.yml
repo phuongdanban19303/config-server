@@ -5,18 +5,6 @@ eureka:
         service-url:
             defaultZone: http://localhost:8686/eureka/
 
-spring:
-
-    rabbitmq:
-        host: localhost
-        port: 5672
-        username: guest
-        password: guest
-
-
-    cloud:
-        bus:
-            enabled: true
     application:
         name: ship-service
 
@@ -29,4 +17,4 @@ spring:
 
 
 test:
-  username: maitrang
+  username: camly
