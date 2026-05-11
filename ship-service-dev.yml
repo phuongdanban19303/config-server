@@ -13,7 +13,6 @@ spring:
         username: guest
         password: guest
 
-
     cloud:
         bus:
             enabled: true
@@ -22,11 +21,3 @@ spring:
 
     profiles:
         active: dev
-
-    config:
-        import: optional:configserver:http://localhost:8888
-
-
-
-test:
-  username: camly
