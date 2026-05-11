@@ -1,5 +1,31 @@
-server:
-  port: 8787
+eureka:
+    client:
+        fetch-registry: true
+        register-with-eureka: true
+        service-url:
+            defaultZone: http://localhost:8686/eureka/
+
+spring:
+
+    rabbitmq:
+        host: localhost
+        port: 5672
+        username: guest
+        password: guest
+
+    cloud:
+        bus:
+            enabled: true
+    application:
+        name: ship-service
+
+    profiles:
+        active: dev
+
+    config:
+        import: optional:configserver:http://localhost:8888
+
+
 
 test:
-  username: mai trang 
+  username: camly
